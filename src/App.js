@@ -42,9 +42,9 @@ class App extends React.Component {
     this.setState({ todos: newTodos });
   }
 
-  deleteTodo = (todoDelete) {
+  deleteTodo(todoDelete) {
     this.setState({
-      todos: this.state.todos.filter((todo) => todo.id == todoDelete.id),
+      todos: this.state.todos.filter((todo) => todo.id !== todoDelete.id),
     });
   }
 
